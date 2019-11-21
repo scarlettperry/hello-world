@@ -1,0 +1,61 @@
+---
+title: Setting Up A CSS Grid Layout
+author: Scarlett Perry
+date: 2018-08-30
+slug: setting-up-css-grid
+---
+For me, the most challenging part of CSS is positioning layout items. There are many styles for arranging elements, a bunch of possible values for that style (ie. static, absolute, fixed, relative),and their names aren’t that descriptive of what they do.
+
+Cue: CSS grid, a new mode for layout design introduced in 2017, which allows you to easily create complex, mult-dimenstional (**rows and columns**) web layouts.
+
+## Implementing CSS grid begins with:
+
+(1) designating a grid container, the parent element that is the box container for your grid items
+
+(2) selecting what those those grid items are (ie. header, sidebar(s), navigation bar, footer, etc.)
+
+(3) designing your grid layout (how many rows and/or columns, where certain grid items go)
+
+![View [source](https://www.youtube.com/watch?v=FEnRpy9Xfes)](https://cdn-images-1.medium.com/max/2784/1*jfqs2MTTjVSIkMxMYqgVOA.png)*View [source](https://www.youtube.com/watch?v=FEnRpy9Xfes)*
+
+![View [source](https://www.youtube.com/watch?v=FEnRpy9Xfes)](https://cdn-images-1.medium.com/max/2524/1*Y-0ZuY94H3EMjrxgQzw6Uw.png)*View [source](https://www.youtube.com/watch?v=FEnRpy9Xfes)*
+
+![View [source](https://medium.com/@purplecones/playing-with-css-grid-layout-a75836098370)](https://cdn-images-1.medium.com/max/2000/1*Uhmmg2DHPxlsjkwu_vTaYw.gif)*View [source](https://medium.com/@purplecones/playing-with-css-grid-layout-a75836098370)*
+
+## Top 3 Reasons to Use CSS Grid (& how to quickly set it up)
+
+### **1. Few lines of code**
+
+* display: grid in your parent element, thereby designating it as the grid container
+
+* grid-template-areas to specify the location of grid items in your grid container
+
+* grid-template-columns to specify the size of your grid items
+
+* grid-gap to specify the gap between your grid items
+
+![index page of my Rails group project](https://cdn-images-1.medium.com/max/5078/1*0kGFgpHDNSDzrCWZfR_BTA.png)*index page of my Rails group project*
+
+### **2. Visually represting layout in words**
+
+Setting up your grid areas like so:
+
+grid-template-areas: “header header header”
+ “menu content content”
+ “footer footer footer”;
+
+would give you 3 rows and 3 columns in which the **header section** spans 3 columns on the first row; the **menu section** spans 1 column on the second row; the **content section** spans 2 columns on the second row; the **footer section** spans 3 columns on the third row.
+
+![view [source](https://twitter.com/k0ychev/status/1034735683850698752?s=12)](https://cdn-images-1.medium.com/max/2400/1*NGI2wiCKJujv7pW-MfWc-g.jpeg)*view [source](https://twitter.com/k0ychev/status/1034735683850698752?s=12)*
+
+### 3. **Easy Math (to visualize)**
+
+Fractional unit fr represents a fraction of the available space of the container. I think of a pizza — the entire pizza is the grid container and each grid element is a slice of the pizza. So thinking back to middle school math, the grid element is the numerator and the grid container is the denominator. If I assign each grid item an equal slice of the pizza, then even before I preview my code on the webpage, I know that the grid items will be equally sized.
+
+And that’s it! CSS grid is awesome.
+
+## Resources:
+
+* Jen Simmon’s Basics of CSS Grid: The Big Picture, [https://www.youtube.com/watch?v=FEnRpy9Xfes](https://www.youtube.com/watch?v=FEnRpy9Xfes)
+
+* Mizra Joldic’s “Playing with CSS Grid Layout”, [https://medium.com/@purplecones/playing-with-css-grid-layout-a75836098370](https://medium.com/@purplecones/playing-with-css-grid-layout-a75836098370)

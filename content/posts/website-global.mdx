@@ -1,0 +1,60 @@
+---
+title: Is Your Website Global?
+author: Scarlett Perry
+date: 2018-07-30
+slug: is-your-website-global
+---
+In 2015, I moved to Beijing, China for work and was introduced to the world of VPNs (Virtual Private Networks) that allowed me to access foreign websites blocked by the Chinese government. Even with a VPN, it was common for sites to still load slowly or not load at all. This was to be expected, as China and VPN companies are constantly making changes and updates to keep the other party out. However, when I came back to the U.S. and tried browsing the sites I had used in China, I was surprised by the slow load times. This was confusing because:
+
+1. the Chinese websites aren’t blocked by the U.S.
+
+2. the websites load so quickly in China
+
+3. I have strong wifi
+
+![](https://cdn-images-1.medium.com/max/2000/1*vg46kn0_-fB3PTatJfCVcQ.gif)
+
+Why was this happening?
+
+I revisited the question earlier this year at [Codeland](http://codelandconf.com/), when I heard a great talk on web performance by Ben Halpern, Founder of [dev.to](https://dev.to/). I learned about terms like **latency** and of tools such as **CDN** (Content Delivery Network), which refined my understanding of what it means to make a website fast.
+> **Definitions**:
+> **Latency** (in context of internet connection): how long it takes data to travel between its source and destination; latency is delay
+> **CDN** (Content Delivery Network): a system of distributed servers that deliver webpages and other web content to a user, based on the geographic location of the user
+
+### **Distance Traveled**
+
+If the user has access to strong wifi, shouldn’t they be able to easily browse any website, no matter where they are in the world? Not necessarily! The distance that a site has to travel, from point A (where the user is) to point B (where the website is hosted), matters. So, if you are in New York and are browsing a site with servers located in another country (more on this soon), the latency would be perceptible. Latency is the delay between the request to load a web page and the moment the data appears on our screen, which means that latency is always with us. The degree to which we perceive the delay, however, varies on the physical distance between you and the website’s hosting server.
+
+![View [source](https://www.youtube.com/watch?v=InhGahmVjdk)](https://cdn-images-1.medium.com/max/2528/1*IhnUM-cYDO0DBGfbmV6uLA.png)*View [source](https://www.youtube.com/watch?v=InhGahmVjdk)*
+
+I find this fascinating to think about/see in action because latency affects a website’s user experience and a website’s reach. A website might be optimized for the host country it is in but then load so slowly in another country, which can be a critical flaw if you’re hoping your website will have a global audience. You can quickly lose/never gain a user base if the website is unpleasant to use.
+
+But if **latency is always with us**, how can a website’s speed be improved?
+
+![](https://cdn-images-1.medium.com/max/2000/1*fpawV13J7KrNPUZfCVL8iA.gif)
+
+### **Degrees of Separation**
+
+A CDN (Content Delivery Network) is meant to address the issue of latency by putting a website’s content physically closer to its visitors. A CDN achieves this by storing a website’s content through a network of servers in multiple geographical locations at once. So, for example, when a user from Italy tries to access a US hosted-website, the website would be retrieved from the closet CDN server to the user (as opposed from a server located across the globe). This means faster load times and happier visitors.
+
+It’s important to note that a CDN does not host the website but rather stores a copy of the website content from the originating server, thereby serving as a mirror. It also constantly communicates with the originating server to store any new website updates that weren’t previously cached.
+
+![View [source](https://www.youtube.com/watch?v=InhGahmVjdk)](https://cdn-images-1.medium.com/max/2496/1*2X_FEgfKw8AAXhzXLwbCXA.png)*View [source](https://www.youtube.com/watch?v=InhGahmVjdk)*
+
+In considering whether to use a CDN, ask yourself — who’s my audience? Is it important that my (future) website be accessible by users around the world?
+
+### Closing the Gap
+
+It’s surprising to think that websites may be “offline” to certain parts of the world due to the physical distances that data has to travel. This almost seems impossible, especially in this day and age when it seems that information can’t be contained. However, with the help of web performance tools, developers can influence their site’s user experience and accessibility and make decisions on how best to reach their target audience.
+
+*Note: There are various factors that influence web performance but the focus of this article is on one solution to address latency. Aditionally, this was a brief introduction to CDNs; to read more about this tool and both its advantages and disadvantages, read more [here](https://websitehosting.com/blog/cdn-improve-websites-performance/).*
+
+**Readings/videos that helped me learn about web performance:**
+
+* Vangie Beal’s article on Content Delivery Network [https://www.webopedia.com/TERM/C/CDN.html](https://www.webopedia.com/TERM/C/CDN.html)
+
+* Ben Halpern’s article on Making dev.to Incredibly Fast [https://dev.to/ben/making-devto-insanely-fast](https://dev.to/ben/making-devto-insanely-fast)
+
+* Chris Hoffman’s article on How Latency Can Make Even Fast Internet Connections Feel Slow [https://www.howtogeek.com/138771/htg-explains-how-latency-can-make-even-fast-internet-connections-feel-slow/](https://www.howtogeek.com/138771/htg-explains-how-latency-can-make-even-fast-internet-connections-feel-slow/)
+
+* LiquidWeb’s video on CDN Explained in 60 Seconds [https://www.youtube.com/watch?v=InhGahmVjdk](https://www.youtube.com/watch?v=InhGahmVjdk)
